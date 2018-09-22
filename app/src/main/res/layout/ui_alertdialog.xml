@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    style="@style/MatchW_MatchH"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 中间白色背景,两个TextView,标题和内容,留一个LinearLayout,在代码中根据调用动态加上按钮 -->
+
+    <LinearLayout
+        style="@style/MatchW_WrapH"
+        android:layout_margin="2dp"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/gray"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/img_hx"
+            style="@style/MatchW_WrapH"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/line_hx"/>
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/MatchW_WrapH"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/color_new_secondary"
+            android:textSize="14sp"/>
+        <!-- 在LinearLayout中加按钮 -->
+
+        <View
+            android:id="@+id/img_line002"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/ui_new_divider_bg"/>
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/MatchW_WrapH"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_cancle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ui_btn_cancel_selector"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="10dp"
+                    android:text="取消"
+                    android:textColor="@color/write"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/btn_sure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ui_new_dialog_common_selector"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="10dp"
+                    android:text="确定"
+                    android:textColor="@color/write"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

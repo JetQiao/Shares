@@ -1,0 +1,74 @@
+<RelativeLayout
+    android:id="@+id/rl_title_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@color/blue">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_back"
+        style="@style/WrapW_MatchH">
+
+        <ImageView
+            android:id="@+id/img_title_back"
+            style="@style/WrapW_WrapH"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:contentDescription="@null"
+            android:paddingRight="15dip"
+            android:src="@mipmap/icon_return"/>
+
+
+        <TextView
+            android:id="@+id/tv_title_left"
+            style="@style/WrapW_WrapH"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_title_back"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:paddingRight="10dp"
+            android:textSize="18sp"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title_name"
+        style="@style/WrapW_WrapH_CV_CH"
+        android:gravity="center"
+        android:text="@string/hello_world"
+        android:textColor="@color/write"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_title_menu"
+        style="@style/WrapW_MatchH"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/img_title_menu"
+            style="@style/WrapW_WrapH"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"/>
+    </RelativeLayout>
+    
+    
+     <RelativeLayout
+        android:id="@+id/rl_title_menu_text"
+        style="@style/WrapW_MatchH"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/tv_title_menu_text"
+            style="@style/WrapW_WrapH"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

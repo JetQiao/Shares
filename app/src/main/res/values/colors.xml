@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="line_view_horizontal">#A8A9AD</color>
+    <!-- View横向线 -->
+    <color name="color_new_disable">#cccccc</color>
+    <color name="color_new_secondary">#666666</color>
+    <color name="ui_new_divider_bg">#d5d5d5</color>
+    <!-- 边框色 -->
+    <color name="color_ffbb26">#ffbb26</color>
+    <color name="color_febb26">#febb26</color>
+    <color name="frame_stroke">#9c9c9c</color>
+    <color name="color_ff9f20">#ff9f20</color>
+    <color name="ui_new_btn_common_normal_solid">#f03f37</color>
+    <color name="ui_new_btn_common_pressed_solid">#dd271e</color>
+    <!-- 取消 -->
+    <color name="ui_new_btn_cancel_normal_solid">#D5D5D5</color>
+    <color name="ui_new_btn_cancel_pressed_solid">#999898</color>
+    <!-- 确认 -->
+    <color name="ui_new_btn_ok_normal_solid">#fb5c18</color>
+    <color name="ui_new_btn_ok_pressed_solid">#fb4b10</color>
+    <!--  -->
+    <color name="write">#ffffff</color>
+    <!-- 白色 -->
+    <color name="scanMain">#BFEFFF</color>
+    <color name="forum2">#3C90F3</color>
+    <color name="forum3">#17A2B7</color>
+    <color name="forum4">#C6395F</color>
+    <color name="base_start_color_pressed">#ff3590c4</color>
+    <color name="base_end_color_pressed">#ff2570ba</color>
+    <color name="base_start_color_default">#FFFFFF</color>
+    <color name="base_end_color_default">#FFFFFF</color>
+    <color name="input">#1ea3d7</color>
+    <color name="name2">#288edb</color>
+    <color name="rounded_container_border">#ffb7babb</color>
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <!-- List -->
+
+    <color name="transparent">#00000000</color>
+    <color name="gray">#ff808080</color>
+    <color name="lightGray">#ffd3d3d3</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#fff56867</color>
+    <color name="green">#ff27c257</color>
+    <color name="white">#ffffffff</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="lightBlue">#ffadd8e6</color>
+    <color name="progress_color1">#ff4682b4</color>
+    <color name="progress_color2">#ffc8c8c8</color>
+    <color name="title_back_color">#ff130d0a</color>
+    <color name="itemBgNormal">#ffffffff</color>
+    <color name="itemBgPressed">#fff8f8f8</color>
+    <color name="itemBgDarkNormal">#fff0f0f0</color>
+    <color name="itemBgDarkPressed">#ffe9e9e9</color>
+    <color name="mainFontColor">#fff9c702</color>
+    <color name="tipBgColor">#ff452b0a</color>
+    <color name="cdNormalColor">#ff3e2708</color>
+    <color name="cdCheckedColor">#fff9c702</color>
+    <color name="stateFont1">#fffacd89</color>
+    <color name="stateFont2">#ffcce098</color>
+    <color name="contentFont1">#ffffffff</color>
+    <color name="contentFont2">#fff9c702</color>
+    <color name="select_bg_normal_color">#ffffffff</color>
+    <color name="select_bg_pressed_color">#fff9c702</color>
+    <color name="tipFontColor">#ff00aadb</color>
+    <color name="dividerLine">#ff956856</color>
+
+    <!-- 确认 -->
+    <color name="txt_store_title_13_c">#131313</color>
+    <color name="txt_store_title_3a_c">#3a3a3a</color>
+    <color name="txt_store_title_3b_c">#3b3b3b</color>
+    <color name="txt_store_title_b4_c">#b4b4b4</color>
+    <color name="txt_store_title_6e_c">#6e6e6e</color>
+    <color name="color_666666">#666666</color>
+    <color name="txt_store_hint_e9_c">#e9e9e9</color>
+    <color name="txt_hite_c">#929292</color>
+    <color name="txt_btn_code_c">#0a0a0a</color>
+    <color name="url_bg_3c">#ccc</color>
+    <color name="btn_green">#009933</color>
+    <color name="mine_bg">#eee</color>
+    <color name="font_tab_unselected_color">#3a3a3a</color>
+    <color name="font_tab_selected_color">#f03f37</color>
+    <color name="button_bg_color">#0fc4d9</color>
+    <color name="button_bg_color_selector">#747ae9</color>
+    <color name="color_nav_text">#ff414141</color>
+    <color name="base_black">#ff000000</color>
+    <color name="base_bg_color">#ffffffff</color>
+    <color name="store_orange_c">#fb5c18</color>
+    <color name="color_00c78c">#f03f37</color>
+    <color name="color_f5f5f5">#f6f6f6</color>
+    <color name="font_bdbcbc">#bdbcbc</color>
+    <color name="font_646464">#646464</color>
+    <color name="color_383838">#383838</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_f7f5f6">#f7f5f6</color>
+    <color name="color_c4c4c4">#c4c4c4</color>
+    <color name="color_6d6d6d">#6d6d6d</color>
+    <color name="color_btn_solid_e6fff8">#e6fff8</color>
+    <color name="color_search_no_data">#F0F0F0</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_ebebeb">#ebebeb</color>
+    <color name="color_6e6e6e">#6e6e6e</color>
+    <color name="cousume_uncomp_color">#EA632C</color>
+    <color name="color_706a6a">#706a6a</color>
+    <color name="color_b6b2b1">#b6b2b1</color>
+    <color name="color_98c0b4">#98c0b4</color>
+    <color name="color_898989">#898989</color>
+    <color name="color_bcbcbc">#bcbcbc</color>
+    <color name="color_545454">#545454</color>
+    <color name="color_7c7c7c">#7c7c7c</color>
+    <color name="color_c9c9c9">#c9c9c9</color>
+    <color name="color_ffcc42">#ffcc42</color>
+    <color name="window_bg">#88838B8B</color>
+    <color name="crop_background">#737373</color>
+    <color name="color_e8602c">#e8602c</color>
+    <color name="tx_his_ye_c">#d99333</color>
+    <color name="vote_submit_orange">#ff864e</color>
+    <color name="vote_submit_red">#ff0000</color>
+    <color name="color_fff438">#fff438</color>
+    <color name="color_7ec602">#7ec602</color>
+
+    <!-- New Style -->
+    <color name="color_new_primary">#333333</color>
+    <color name="color_new_hint">#999999</color>
+    <color name="color_new_yellow">#fac864</color>
+    <color name="color_new_red">#f03f37</color>
+    <color name="color_new_near_prompt">#ff9f20</color>
+    <color name="txt_gray_dark">#333333</color>
+    <color name="txt_gray_mid">#666666</color>
+    <color name="txt_gray_light">#a0a0a0</color>
+    <color name="bg_btn_login">#4893FF</color>
+    <!-- 登陆按钮 -->
+    <color name="bg_btn_login_press">#2C6CFF</color>
+    <!-- 登陆按钮按 -->
+    <color name="bg_edt_login">#BDBEC1</color>
+    <!-- 登陆输入框 -->
+    <color name="text_weather_trend">#288DE2</color>
+    <!-- 天气趋势文字 -->
+    <color name="bg_color_call">#43c3f0</color>
+    <!-- 一键呼list背景 -->
+
+    <color name="line">#ffd3dde6</color>
+    <color name="feise">#ef4136</color>
+    <!-- 绯色 -->
+    <color name="liuli">#2a5caa</color>
+    <!-- 琉璃色 -->
+
+    <color name="albumback">#E1E0DE</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="none_color">#00000000</color>
+
+    <color name="title_bar">#eeeeee</color>
+    <color name="title_title">#d94b25</color>
+    <color name="line_gray">#dcdcdc</color>
+    <color name="line_gray_df">#dfdfdf</color>
+    <color name="red_text">#e53132</color>
+
+    <color name="color_login_bg">#2d303f</color>
+    <color name="color_login_btn_press">#e67817</color>
+    <color name="color_login_btn_normal">#009790</color>
+
+    <color name="text_blue">#4d8ee2</color>
+
+
+</resources>

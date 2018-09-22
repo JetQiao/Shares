@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchW_WrapH"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip"
+    android:background="@color/write">
+
+    <TextView
+        android:id="@+id/tv_dialog_edt_submit_title"
+        style="@style/MatchW_WrapH"
+        android:padding="10dip"
+        android:text="请输入相关值"
+        android:textColor="@color/gray"
+        android:textSize="20sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_edt"
+        style="@style/MatchW_WrapH"
+        android:layout_below="@+id/tv_dialog_edt_submit_title"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <LinearLayout
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="总资产："/>
+
+            <EditText
+                android:id="@+id/edt_money_total"
+                style="@style/MatchW_WrapH"
+                android:background="@null"
+                android:gravity="left|center"
+                android:hint="输入总资产"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="10dp"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/font_tab_selected_color"/>
+
+        <LinearLayout
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="总盈亏："/>
+
+            <EditText
+                android:id="@+id/edt_money_lost"
+                style="@style/MatchW_WrapH"
+                android:background="@null"
+                android:gravity="left|center"
+                android:hint="输入浮动盈亏"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="10dp"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/font_tab_selected_color"/>
+
+        <LinearLayout
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="总市值："/>
+
+            <EditText
+                android:id="@+id/edt_money_total_money"
+                style="@style/MatchW_WrapH"
+                android:background="@null"
+                android:gravity="left|center"
+                android:hint="输入总市值"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="10dp"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/font_tab_selected_color"/>
+
+        <LinearLayout
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="可    取："/>
+
+            <EditText
+                android:id="@+id/edt_money_use"
+                style="@style/MatchW_WrapH"
+                android:background="@null"
+                android:gravity="left|center"
+                android:hint="输入可取金额"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="10dp"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/font_tab_selected_color"/>
+
+        <LinearLayout
+            style="@style/MatchW_WrapH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="总    用："/>
+
+            <EditText
+                android:id="@+id/edt_money_have"
+                style="@style/MatchW_WrapH"
+                android:background="@null"
+                android:gravity="left|center"
+                android:hint="输入可用金额"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="10dp"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/font_tab_selected_color"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_dialog_edt_submit"
+        style="@style/MatchW_WrapH"
+        android:layout_below="@+id/ll_dialog_edt"
+        android:background="@color/red"
+        android:text="确      定"
+        android:textColor="@color/write"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
