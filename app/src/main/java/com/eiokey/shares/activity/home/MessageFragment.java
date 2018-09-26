@@ -14,6 +14,8 @@ public class MessageFragment extends Fragment
     {
         View messageLayout = inflater.inflate(R.layout.message_layout, container, false);
         return messageLayout;
+
+
     }
 
 }

@@ -16,6 +16,8 @@ public class SettingFragment extends Fragment
     {
         View settingLayout = inflater.inflate(R.layout.setting_layout, container, false);
         return settingLayout;
+
+
     }
 
 }

@@ -18,4 +18,7 @@ public class ContactsFragment extends Fragment
         return contactsLayout;
     }
 
+
+
+
 }

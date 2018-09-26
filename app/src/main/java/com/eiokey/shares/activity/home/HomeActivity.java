@@ -118,6 +118,8 @@ public class HomeActivity extends TitleBarActivity
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home);
+
+
         // 初始化布局元素
         initViews();
         fragmentManager = getFragmentManager();

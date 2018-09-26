@@ -19,6 +19,8 @@ public class HomepageFragment extends Fragment
     {
         View contactsLayout = inflater.inflate(R.layout.contacts_layout, container, false);
         return contactsLayout;
+
+
     }
 
 }
