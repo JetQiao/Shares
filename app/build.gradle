@@ -3,7 +3,7 @@ apply plugin: 'com.antfortune.freeline'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "com.eiokey.shares"
         minSdkVersion 15
@@ -17,6 +17,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml") // your choice of filename/path here
     }
 
     sourceSets {
