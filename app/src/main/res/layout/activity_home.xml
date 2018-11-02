@@ -1,164 +1,156 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1">
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-         >
+        android:layout_height="55dp"
+        android:background="@color/base_black"
+        android:baselineAligned="false">
 
 
         <RelativeLayout
-            android:id="@+id/homepage_layout"
+            android:id="@+id/rl_home_shouye"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables,UselessParent">
 
                 <ImageView
-                    android:id="@+id/message_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/message_unselected" />
+                    android:id="@+id/img_home_shouye"
+                    style="@style/home_img_style"
+                    android:src="@drawable/search_normal_img"
+                    tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/message_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="消息"
-                    android:textColor="#82858b" />
+                    android:id="@+id/tv_home_shouye"
+                    style="@style/home_tv_style"
+                    android:text="首页"
+                    tools:ignore="HardcodedText"/>
             </LinearLayout>
         </RelativeLayout>
 
 
         <RelativeLayout
-            android:id="@+id/message_layout"
+            android:id="@+id/rl_home_hangqing"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables,UselessParent">
 
                 <ImageView
-                    android:id="@+id/message_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/message_unselected" />
+                    android:id="@+id/img_home_hangqing"
+                    style="@style/home_img_style"
+                    android:src="@drawable/hangqing_normal_img"
+                    tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/message_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="消息"
-                    android:textColor="#82858b" />
+                    android:id="@+id/tv_home_hangqing"
+                    style="@style/home_tv_style"
+                    android:text="行情"
+                    tools:ignore="HardcodedText,SpUsage"/>
             </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/contacts_layout"
+            android:id="@+id/rl_home_zixuan"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables,UselessParent">
 
                 <ImageView
-                    android:id="@+id/contacts_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/contacts_unselected" />
+                    android:id="@+id/img_home_zixuan"
+                    style="@style/home_img_style"
+                    android:src="@drawable/zixuan_normal_img"
+                    tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/contacts_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="联系人"
-                    android:textColor="#82858b" />
+                    android:id="@+id/tv_home_zixuan"
+                    style="@style/home_tv_style"
+                    android:text="自选"
+                    tools:ignore="HardcodedText"/>
             </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/news_layout"
+            android:id="@+id/rl_home_jiaoyi"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables,UselessParent">
 
                 <ImageView
-                    android:id="@+id/news_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/news_unselected" />
+                    android:id="@+id/img_home_jiaoyi"
+                    style="@style/home_img_style"
+                    android:src="@drawable/trade_normal_img"
+                    tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/news_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="动态"
-                    android:textColor="#82858b" />
+                    android:id="@+id/tv_home_jiaoyi"
+                    style="@style/home_tv_style"
+                    android:text="交易"
+                    tools:ignore="HardcodedText"/>
             </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/setting_layout"
+            android:id="@+id/rl_home_zixun"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables,UselessParent">
 
                 <ImageView
-                    android:id="@+id/setting_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/setting_unselected" />
+                    android:id="@+id/img_home_zixun"
+                    style="@style/home_img_style"
+                    android:src="@drawable/news_normal_img"
+                    tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/setting_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="设置"
-                    android:textColor="#82858b" />
+                    android:id="@+id/tv_home_zixun"
+                    style="@style/home_tv_style"
+                    android:text="资讯"
+                    tools:ignore="HardcodedText"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

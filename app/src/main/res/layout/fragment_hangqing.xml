@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_titlebar_hangqing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_red_light">
+
+        <TextView
+            android:id="@+id/tv_hanqging_title_more"
+            style="@style/WrapW_WrapH_CV"
+            android:layout_marginStart="20dp"
+            android:text="更多"
+            android:textColor="@color/write"
+            android:textSize="18dp"/>
+
+
+        <TextView
+
+            android:id="@+id/tv_title_name"
+            style="@style/WrapW_WrapH_CV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:text="市场行情"
+            android:textColor="@color/write"
+            android:textSize="18dp"/>
+
+
+        <ImageView
+            android:id="@+id/img_title_repair_maintenance_more1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toStartOf="@+id/img_title_repair_maintenance_more"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/voice_assistant"
+            android:contentDescription="@null"/>
+
+
+        <ImageView
+            android:id="@+id/img_title_repair_maintenance_more"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/title_bar_search_normal"
+            android:contentDescription="@null"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+</RelativeLayout>

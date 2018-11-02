@@ -57,14 +57,14 @@ public class MainActivity extends Activity
             public View getView(int position, View convertView, ViewGroup parent)
             {
                 View view = super.getView(position, convertView, parent);
-                TextView tv_lv_name = (TextView) view.findViewById(R.id.tv_lv_name);
-                TextView tv_lv_money_all = (TextView) view.findViewById(R.id.tv_lv_money_all);
-                TextView tv_lv_loss = (TextView) view.findViewById(R.id.tv_lv_loss);
-                TextView tv_lv_loss_proint = (TextView) view.findViewById(R.id.tv_lv_loss_proint);
-                TextView tv_lv_have = (TextView) view.findViewById(R.id.tv_lv_have);
-                TextView tv_lv_use = (TextView) view.findViewById(R.id.tv_lv_use);
-                TextView tv_lv_cost = (TextView) view.findViewById(R.id.tv_lv_cost);
-                TextView tv_lv_now = (TextView) view.findViewById(R.id.tv_lv_now);
+                TextView tv_lv_name = view.findViewById(R.id.tv_lv_name);
+                TextView tv_lv_money_all = view.findViewById(R.id.tv_lv_money_all);
+                TextView tv_lv_loss = view.findViewById(R.id.tv_lv_loss);
+                TextView tv_lv_loss_proint = view.findViewById(R.id.tv_lv_loss_proint);
+                TextView tv_lv_have = view.findViewById(R.id.tv_lv_have);
+                TextView tv_lv_use = view.findViewById(R.id.tv_lv_use);
+                TextView tv_lv_cost = view.findViewById(R.id.tv_lv_cost);
+                TextView tv_lv_now = view.findViewById(R.id.tv_lv_now);
                 Boolean isFocus = (Boolean) getDataList().get(position).get("isfocus");
                 if (isFocus)
                 {
@@ -143,15 +143,15 @@ public class MainActivity extends Activity
 
     private void getViews()
     {
-        lv_content = (ListViewForScrollView) findViewById(R.id.lv_content);
-        scrol_main = (ScrollView) findViewById(R.id.scrol_main);//Scrollview
-        ll_main_money = (LinearLayout) findViewById(R.id.ll_main_money);//变更资产值
-        tv_main_total = (TextView) findViewById(R.id.tv_main_total);//总资产
-        tv_main_lost = (TextView) findViewById(R.id.tv_main_lost);//总盈亏
-        tv_main_money_total = (TextView) findViewById(R.id.tv_main_money_total);//总市值
-        tv_main_use = (TextView) findViewById(R.id.tv_main_use);//可取
-        tv_main_have = (TextView) findViewById(R.id.tv_main_have);//可用
-        ll_main_order = (LinearLayout) findViewById(R.id.ll_main_order);//交易
+        lv_content = findViewById(R.id.lv_content);
+        scrol_main = findViewById(R.id.scrol_main);//Scrollview
+        ll_main_money = findViewById(R.id.ll_main_money);//变更资产值
+        tv_main_total = findViewById(R.id.tv_main_total);//总资产
+        tv_main_lost = findViewById(R.id.tv_main_lost);//总盈亏
+        tv_main_money_total = findViewById(R.id.tv_main_money_total);//总市值
+        tv_main_use = findViewById(R.id.tv_main_use);//可取
+        tv_main_have = findViewById(R.id.tv_main_have);//可用
+        ll_main_order = findViewById(R.id.ll_main_order);//交易
     }
 
 
@@ -294,13 +294,13 @@ public class MainActivity extends Activity
             //            window.setAttributes(layoutParams);
             window.setContentView(R.layout.ui_alertdialog_edt);
             alertDialog.setCanceledOnTouchOutside(false);
-            Button btn_dialog_edt_submit = (Button) window.findViewById(R.id.btn_dialog_edt_submit);
+            Button btn_dialog_edt_submit = window.findViewById(R.id.btn_dialog_edt_submit);
 
-            final EditText edt_money_total = (EditText) window.findViewById(R.id.edt_money_total);//输入总资产
-            final EditText edt_money_lost = (EditText) window.findViewById(R.id.edt_money_lost);//输入总盈亏
-            final EditText edt_money_total_money = (EditText) window.findViewById(R.id.edt_money_total_money);//输入总市值
-            final EditText edt_money_use = (EditText) window.findViewById(R.id.edt_money_use);//可取
-            final EditText edt_money_have = (EditText) window.findViewById(R.id.edt_money_total);//可用
+            final EditText edt_money_total = window.findViewById(R.id.edt_money_total);//输入总资产
+            final EditText edt_money_lost = window.findViewById(R.id.edt_money_lost);//输入总盈亏
+            final EditText edt_money_total_money = window.findViewById(R.id.edt_money_total_money);//输入总市值
+            final EditText edt_money_use = window.findViewById(R.id.edt_money_use);//可取
+            final EditText edt_money_have = window.findViewById(R.id.edt_money_total);//可用
 
             //确认按钮
             btn_dialog_edt_submit.setOnClickListener(new View.OnClickListener()

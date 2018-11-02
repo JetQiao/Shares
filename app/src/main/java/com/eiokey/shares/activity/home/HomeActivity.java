@@ -12,104 +12,26 @@ import android.widget.TextView;
 import com.eiokey.shares.R;
 import com.eiokey.shares.utils.TitleBarActivity;
 
+
 /**
  * 项目的主Activity，所有的Fragment都嵌入在这里。
  */
-public class HomeActivity extends TitleBarActivity
+public class HomeActivity extends TitleBarActivity implements View.OnClickListener
 {
+    /* 用于展示五个页面的Fragment*/
+    private ShouyeFragment shouyeFragment;//首页
+    private HangqingFragment hangqingFragment;//行情
+    private ZixuanFragment zixuanFragment; //自选
+    private JiaoyiFragment jiaoyiFragment; //交易
+    private ZixunFragment zixunFragment;//资讯
 
+    /* 在Tab布局上显示图标的控件*/
+    private ImageView img_home_shouye, img_home_hangqing, img_home_zixuan, img_home_jiaoyi, img_home_zixun;
 
-    /*用于展示五个页面的Fragment*/
-    private HomepageFragment homepageFragment;
+    /* 在Tab布局上显示文字的控件*/
+    private TextView tv_home_shouye, tv_home_hangqing, tv_home_zixuan, tv_home_jiaoyi, tv_home_zixun;
 
-    /**
-     * 用于展示消息的Fragment
-     */
-    private MessageFragment messageFragment;
-
-    /**
-     * 用于展示联系人的Fragment
-     */
-    private ContactsFragment contactsFragment;
-
-    /**
-     * 用于展示动态的Fragment
-     */
-    private NewsFragment newsFragment;
-
-    /**
-     * 用于展示设置的Fragment
-     */
-    private SettingFragment settingFragment;
-
-
-    /*五个界面布局*/
-    private View homepageLayout;
-
-
-    /**
-     * 消息界面布局
-     */
-    private View messageLayout;
-
-    /**
-     * 联系人界面布局
-     */
-    private View contactsLayout;
-
-    /**
-     * 动态界面布局
-     */
-    private View newsLayout;
-
-    /**
-     * 设置界面布局
-     */
-    private View settingLayout;
-
-    /**
-     * 在Tab布局上显示消息图标的控件
-     */
-    private ImageView messageImage;
-
-    /**
-     * 在Tab布局上显示联系人图标的控件
-     */
-    private ImageView contactsImage;
-
-    /**
-     * 在Tab布局上显示动态图标的控件
-     */
-    private ImageView newsImage;
-
-    /**
-     * 在Tab布局上显示设置图标的控件
-     */
-    private ImageView settingImage;
-
-    /**
-     * 在Tab布局上显示消息标题的控件
-     */
-    private TextView messageText;
-
-    /**
-     * 在Tab布局上显示联系人标题的控件
-     */
-    private TextView contactsText;
-
-    /**
-     * 在Tab布局上显示动态标题的控件
-     */
-    private TextView newsText;
-
-    /**
-     * 在Tab布局上显示设置标题的控件
-     */
-    private TextView settingText;
-
-    /**
-     * 用于对Fragment进行管理
-     */
+    /* 用于对Fragment进行管理*/
     private FragmentManager fragmentManager;
 
     @Override
@@ -119,12 +41,9 @@ public class HomeActivity extends TitleBarActivity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home);
 
-
-        // 初始化布局元素
-        initViews();
+        initViews(); // 初始化布局元素
         fragmentManager = getFragmentManager();
-        // 第一次启动时选中第0个tab
-        setTabSelection(0);
+        setTabSelection(0); // 第一次启动时选中第0个tab
     }
 
     /**
@@ -132,22 +51,31 @@ public class HomeActivity extends TitleBarActivity
      */
     private void initViews()
     {
-        messageLayout = findViewById(R.id.message_layout);
-        contactsLayout = findViewById(R.id.contacts_layout);
-        newsLayout = findViewById(R.id.news_layout);
-        settingLayout = findViewById(R.id.setting_layout);
-        messageImage = findViewById(R.id.message_image);
-        contactsImage = findViewById(R.id.contacts_image);
-        newsImage = findViewById(R.id.news_image);
-        settingImage = findViewById(R.id.setting_image);
-        messageText = findViewById(R.id.message_text);
-        contactsText = findViewById(R.id.contacts_text);
-        newsText = findViewById(R.id.news_text);
-        settingText = findViewById(R.id.setting_text);
-        messageLayout.setOnClickListener(this);
-        contactsLayout.setOnClickListener(this);
-        newsLayout.setOnClickListener(this);
-        settingLayout.setOnClickListener(this);
+        /*五个界面布局*/
+        View rl_home_shouye = findViewById(R.id.rl_home_shouye);
+        View rl_home_hangqing = findViewById(R.id.rl_home_hangqing);
+        View rl_home_zixuan = findViewById(R.id.rl_home_zixuan);
+        View rl_home_jiaoyi = findViewById(R.id.rl_home_jiaoyi);
+        View rl_home_zixun = findViewById(R.id.rl_home_zixun);
+
+        img_home_shouye = findViewById(R.id.img_home_shouye);
+        img_home_hangqing = findViewById(R.id.img_home_hangqing);
+        img_home_zixuan = findViewById(R.id.img_home_zixuan);
+        img_home_jiaoyi = findViewById(R.id.img_home_jiaoyi);
+        img_home_zixun = findViewById(R.id.img_home_zixun);
+
+
+        tv_home_shouye = findViewById(R.id.tv_home_shouye);
+        tv_home_hangqing = findViewById(R.id.tv_home_hangqing);
+        tv_home_zixuan = findViewById(R.id.tv_home_zixuan);
+        tv_home_jiaoyi = findViewById(R.id.tv_home_jiaoyi);
+        tv_home_zixun = findViewById(R.id.tv_home_zixun);
+
+        rl_home_shouye.setOnClickListener(this);
+        rl_home_hangqing.setOnClickListener(this);
+        rl_home_zixuan.setOnClickListener(this);
+        rl_home_jiaoyi.setOnClickListener(this);
+        rl_home_zixun.setOnClickListener(this);
     }
 
     @Override
@@ -155,21 +83,20 @@ public class HomeActivity extends TitleBarActivity
     {
         switch (v.getId())
         {
-            case R.id.message_layout:
-                // 当点击了消息tab时，选中第1个tab
+            case R.id.rl_home_shouye: //点击首页
                 setTabSelection(0);
                 break;
-            case R.id.contacts_layout:
-                // 当点击了联系人tab时，选中第2个tab
+            case R.id.rl_home_hangqing://点击行情
                 setTabSelection(1);
                 break;
-            case R.id.news_layout:
-                // 当点击了动态tab时，选中第3个tab
+            case R.id.rl_home_zixuan://点击自选
                 setTabSelection(2);
                 break;
-            case R.id.setting_layout:
-                // 当点击了设置tab时，选中第4个tab
+            case R.id.rl_home_jiaoyi://点击交易
                 setTabSelection(3);
+                break;
+            case R.id.rl_home_zixun://点击资讯
+                setTabSelection(4);
                 break;
             default:
                 break;
@@ -179,77 +106,74 @@ public class HomeActivity extends TitleBarActivity
     /**
      * 根据传入的index参数来设置选中的tab页。
      *
-     * @param index 每个tab页对应的下标。0表示消息，1表示联系人，2表示动态，3表示设置。
+     * @param index 每个tab页对应的下标。0首页，1行情，2自选，3交易，4资讯
      */
     private void setTabSelection(int index)
     {
         // 每次选中之前先清楚掉上次的选中状态
         clearSelection();
-        // 开启一个Fragment事务
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        // 先隐藏掉所有的Fragment，以防止有多个Fragment显示在界面上的情况
-        hideFragments(transaction);
+        FragmentTransaction transaction = fragmentManager.beginTransaction();  // 开启一个Fragment事务
+        hideFragments(transaction);      // 先隐藏掉所有的Fragment，以防止有多个Fragment显示在界面上的情况
         switch (index)
         {
-            case 0:
-                // 当点击了消息tab时，改变控件的图片和文字颜色
-                messageImage.setImageResource(R.drawable.message_selected);
-                messageText.setTextColor(Color.WHITE);
-                if (messageFragment == null)
+            case 0://点击首页tab，改变图标文字颜色
+                img_home_shouye.setImageResource(R.drawable.search_select_img);
+                tv_home_shouye.setTextColor(Color.RED);
+                if (shouyeFragment == null)
                 {
-                    // 如果MessageFragment为空，则创建一个并添加到界面上
-                    messageFragment = new MessageFragment();
-                    transaction.add(R.id.content, messageFragment);
+                    shouyeFragment = new ShouyeFragment(); // 如果Fragment为空，则创建一个并添加到界面上
+                    transaction.add(R.id.content, shouyeFragment);
                 } else
                 {
-                    // 如果MessageFragment不为空，则直接将它显示出来
-                    transaction.show(messageFragment);
+                    transaction.show(shouyeFragment); // 如果Fragment不为空，则直接将它显示出来
                 }
                 break;
-            case 1:
-                // 当点击了联系人tab时，改变控件的图片和文字颜色
-                contactsImage.setImageResource(R.drawable.contacts_selected);
-                contactsText.setTextColor(Color.WHITE);
-                if (contactsFragment == null)
+            case 1://点击行情tab,改变图标文字颜色
+                img_home_hangqing.setImageResource(R.drawable.hangqing_select_img);
+                tv_home_hangqing.setTextColor(Color.RED);
+                if (hangqingFragment == null)
                 {
-                    // 如果ContactsFragment为空，则创建一个并添加到界面上
-                    contactsFragment = new ContactsFragment();
-                    transaction.add(R.id.content, contactsFragment);
+                    hangqingFragment = new HangqingFragment();// 如果Fragment为空，则创建一个并添加到界面上
+                    transaction.add(R.id.content, hangqingFragment);
                 } else
                 {
-                    // 如果ContactsFragment不为空，则直接将它显示出来
-                    transaction.show(contactsFragment);
+                    transaction.show(hangqingFragment);// 如果Fragment不为空，则直接将它显示出来
                 }
                 break;
-            case 2:
-                // 当点击了动态tab时，改变控件的图片和文字颜色
-                newsImage.setImageResource(R.drawable.news_selected);
-                newsText.setTextColor(Color.WHITE);
-                if (newsFragment == null)
+            case 2://点击自选tab,改变图标文字颜色
+                img_home_zixuan.setImageResource(R.drawable.zixuan_select_img);
+                tv_home_zixuan.setTextColor(Color.RED);
+                if (zixuanFragment == null)
                 {
-                    // 如果NewsFragment为空，则创建一个并添加到界面上
-                    newsFragment = new NewsFragment();
-                    transaction.add(R.id.content, newsFragment);
+                    zixuanFragment = new ZixuanFragment();// 如果Fragment为空，则创建一个并添加到界面上
+                    transaction.add(R.id.content, zixuanFragment);
                 } else
                 {
-                    // 如果NewsFragment不为空，则直接将它显示出来
-                    transaction.show(newsFragment);
+                    transaction.show(zixuanFragment);// 如果Fragment不为空，则直接将它显示出来
                 }
                 break;
-            case 3:
-            default:
-                // 当点击了设置tab时，改变控件的图片和文字颜色
-                settingImage.setImageResource(R.drawable.setting_selected);
-                settingText.setTextColor(Color.WHITE);
-                if (settingFragment == null)
+            case 3://点击交易tab,改变图标文字颜色
+                img_home_jiaoyi.setImageResource(R.drawable.trade_select_img);
+                tv_home_jiaoyi.setTextColor(Color.RED);
+                if (jiaoyiFragment == null)
                 {
-                    // 如果SettingFragment为空，则创建一个并添加到界面上
-                    settingFragment = new SettingFragment();
-                    transaction.add(R.id.content, settingFragment);
+                    jiaoyiFragment = new JiaoyiFragment();// 如果Fragment为空，则创建一个并添加到界面上
+                    transaction.add(R.id.content, jiaoyiFragment);
                 } else
                 {
-                    // 如果SettingFragment不为空，则直接将它显示出来
-                    transaction.show(settingFragment);
+                    transaction.show(jiaoyiFragment);// 如果Fragment不为空，则直接将它显示出来
+                }
+                break;
+            case 4://点击资讯tab,改变图标文字颜色
+                img_home_zixun.setImageResource(R.drawable.news_select_img);
+                tv_home_zixun.setTextColor(Color.RED);
+                if (zixunFragment == null)
+                {
+                    zixunFragment = new ZixunFragment();// 如果Fragment为空，则创建一个并添加到界面上
+                    transaction.add(R.id.content, zixunFragment);
+                } else
+                {
+                    transaction.show(zixunFragment);// 如果Fragment不为空，则直接将它显示出来
                 }
                 break;
         }
@@ -261,14 +185,20 @@ public class HomeActivity extends TitleBarActivity
      */
     private void clearSelection()
     {
-        messageImage.setImageResource(R.drawable.message_unselected);
-        messageText.setTextColor(Color.parseColor("#82858b"));
-        contactsImage.setImageResource(R.drawable.contacts_unselected);
-        contactsText.setTextColor(Color.parseColor("#82858b"));
-        newsImage.setImageResource(R.drawable.news_unselected);
-        newsText.setTextColor(Color.parseColor("#82858b"));
-        settingImage.setImageResource(R.drawable.setting_unselected);
-        settingText.setTextColor(Color.parseColor("#82858b"));
+        img_home_shouye.setImageResource(R.drawable.search_normal_img);
+        tv_home_shouye.setTextColor(Color.parseColor("#FFFFFF"));
+
+        img_home_hangqing.setImageResource(R.drawable.hangqing_normal_img);
+        tv_home_hangqing.setTextColor(Color.parseColor("#FFFFFF"));
+
+        img_home_zixuan.setImageResource(R.drawable.zixuan_normal_img);
+        tv_home_zixuan.setTextColor(Color.parseColor("#FFFFFF"));
+
+        img_home_jiaoyi.setImageResource(R.drawable.trade_normal_img);
+        tv_home_jiaoyi.setTextColor(Color.parseColor("#FFFFFF"));
+
+        img_home_zixun.setImageResource(R.drawable.news_normal_img);
+        tv_home_zixun.setTextColor(Color.parseColor("#FFFFFF"));
     }
 
     /**
@@ -278,21 +208,25 @@ public class HomeActivity extends TitleBarActivity
      */
     private void hideFragments(FragmentTransaction transaction)
     {
-        if (messageFragment != null)
+        if (shouyeFragment != null)
         {
-            transaction.hide(messageFragment);
+            transaction.hide(shouyeFragment);
         }
-        if (contactsFragment != null)
+        if (hangqingFragment != null)
         {
-            transaction.hide(contactsFragment);
+            transaction.hide(hangqingFragment);
         }
-        if (newsFragment != null)
+        if (zixuanFragment != null)
         {
-            transaction.hide(newsFragment);
+            transaction.hide(zixuanFragment);
         }
-        if (settingFragment != null)
+        if (jiaoyiFragment != null)
         {
-            transaction.hide(settingFragment);
+            transaction.hide(jiaoyiFragment);
+        }
+        if (zixunFragment != null)
+        {
+            transaction.hide(zixunFragment);
         }
     }
 }
